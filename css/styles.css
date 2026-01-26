@@ -93,6 +93,74 @@ body {
     color: #3d4462;
 }
 
+/* Dropdown Menu Styles */
+.nav-item {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dropdown-toggle::after {
+    content: '';
+    border: solid #4b5563;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-top: -3px;
+    transition: transform 0.2s ease;
+}
+
+.nav-item:hover .dropdown-toggle::after {
+    transform: rotate(-135deg);
+    margin-top: 3px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s ease;
+    z-index: 1000;
+    list-style: none;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+    color: #3d4462;
+}
+
 /* CTA Button */
 .cta-button {
     background-color: #e5c565;
@@ -339,6 +407,190 @@ body {
 
     .section-header h2 {
         font-size: 32px;
+    }
+}
+
+/* Page Hero (for category pages) */
+.page-hero {
+    background: linear-gradient(135deg, #3d4462 0%, #1d2438 100%);
+    padding: 60px 40px;
+    color: white;
+}
+
+.page-hero-content {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 24px;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #d4a84b;
+}
+
+.back-link svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.page-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.page-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: #d4a84b;
+}
+
+.page-hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.page-hero > .page-hero-content > p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Page Content */
+.page-content {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.page-content .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 60px;
+}
+
+.main-content h2 {
+    font-size: 32px;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.main-content h3 {
+    font-size: 22px;
+    color: #1a1a2e;
+    margin: 32px 0 16px;
+    font-weight: 600;
+}
+
+.main-content p {
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+}
+
+.service-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.service-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: #d4a84b;
+    border-radius: 50%;
+}
+
+/* Sidebar */
+.sidebar-card {
+    background: #f8f8f8;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+}
+
+.sidebar-card h4 {
+    font-size: 20px;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.sidebar-card p {
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sidebar-button {
+    display: inline-block;
+    background: #3d4462;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.sidebar-button:hover {
+    background: #2d3452;
+}
+
+/* Responsive for category pages */
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero {
+        padding: 40px 20px;
+    }
+
+    .page-hero h1 {
+        font-size: 32px;
+    }
+
+    .page-content .container {
+        padding: 0 20px;
     }
 }
 
