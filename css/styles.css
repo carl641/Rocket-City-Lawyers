@@ -841,6 +841,20 @@ body {
     font-size: 14px;
 }
 
+.footer .disclaimer {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer .copyright {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
