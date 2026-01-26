@@ -106,54 +106,78 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #3d4462 0%, #2d3352 100%);
+    background: linear-gradient(to right, rgba(29, 36, 56, 0.95) 0%, rgba(29, 36, 56, 0.8) 50%, rgba(29, 36, 56, 0.6) 100%),
+                url('../images/huntsville-skyline.jpg') center/cover no-repeat;
+    background-color: #1d2438;
     color: white;
-    padding: 80px 40px;
-    text-align: center;
+    padding: 80px 60px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.location-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(212, 168, 75, 0.2);
+    color: #d4a84b;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.location-badge svg {
+    width: 16px;
+    height: 16px;
+    fill: #d4a84b;
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 52px;
     font-weight: 700;
-    margin-bottom: 20px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.hero h1 .highlight {
+    color: #d4a84b;
 }
 
 .hero p {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.85);
-    max-width: 600px;
-    margin: 0 auto 30px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 580px;
 }
 
-.hero-search {
+.hero-stats {
     display: flex;
-    max-width: 500px;
-    margin: 0 auto;
-    gap: 10px;
+    gap: 40px;
 }
 
-.hero-search input {
-    flex: 1;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
+.stat {
+    display: flex;
+    flex-direction: column;
 }
 
-.hero-search button {
-    background-color: #e5c565;
-    color: #1f2937;
-    padding: 14px 28px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+.stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
 }
 
-.hero-search button:hover {
-    background-color: #d4b455;
+.stat-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Features Section */
@@ -237,14 +261,19 @@ body {
 
     .hero {
         padding: 50px 20px;
+        min-height: 400px;
     }
 
     .hero h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
-    .hero-search {
-        flex-direction: column;
+    .hero-stats {
+        gap: 30px;
+    }
+
+    .stat-number {
+        font-size: 24px;
     }
 
     .features {
