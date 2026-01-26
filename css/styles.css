@@ -594,6 +594,155 @@ body {
     }
 }
 
+/* Directory Listings */
+.directory-listings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.listing-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.listing-card:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.listing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.listing-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0;
+}
+
+.listing-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.listing-rating .stars {
+    color: #d4a84b;
+    font-weight: 600;
+}
+
+.listing-rating .review-count {
+    color: #6b7280;
+}
+
+.listing-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.listing-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    color: #4b5563;
+}
+
+.listing-detail .icon {
+    flex-shrink: 0;
+    width: 20px;
+    text-align: center;
+}
+
+.listing-detail a {
+    color: #3d4462;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.listing-detail a:hover {
+    color: #d4a84b;
+}
+
+.listing-website {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.listing-website a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #3d4462;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.listing-website a:hover {
+    color: #d4a84b;
+}
+
+/* Sidebar info card */
+.sidebar-info {
+    margin-bottom: 24px;
+}
+
+.sidebar-info h4 {
+    font-size: 18px;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.sidebar-info p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.sidebar-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-info ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.sidebar-info ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    background: #d4a84b;
+    border-radius: 50%;
+}
+
 /* Footer */
 .footer {
     background-color: #3d4462;
