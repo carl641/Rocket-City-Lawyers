@@ -198,58 +198,141 @@ body {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Features Section */
-.features {
-    padding: 80px 40px;
+/* Practice Areas Section */
+.practice-areas {
+    padding: 80px 0;
     background-color: #fff;
 }
 
-.features h2 {
-    text-align: center;
-    font-size: 32px;
-    color: #3d4462;
-    margin-bottom: 50px;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
+.practice-areas .container {
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 0 40px;
 }
 
-.feature-card {
+.section-header {
     text-align: center;
-    padding: 30px;
+    max-width: 42rem;
+    margin: 0 auto 60px;
 }
 
-.feature-icon {
-    width: 60px;
-    height: 60px;
-    background-color: #f0f4ff;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-}
-
-.feature-icon svg {
-    width: 30px;
-    height: 30px;
-    fill: #3d4462;
-}
-
-.feature-card h3 {
-    font-size: 20px;
-    color: #3d4462;
+.eyebrow {
+    color: #D4AF37;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    display: block;
     margin-bottom: 12px;
 }
 
-.feature-card p {
+.section-header h2 {
+    font-size: 42px;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+}
+
+.section-header p {
     color: #6b7280;
-    font-size: 15px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+.area-card {
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    background: #fff;
+}
+
+.area-card:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: rgba(10, 25, 47, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.icon-wrapper svg {
+    width: 24px;
+    height: 24px;
+    fill: #3d4462;
+}
+
+.area-card:hover .icon-wrapper {
+    background: rgba(212, 175, 55, 0.2);
+}
+
+.area-card:hover .icon-wrapper svg {
+    fill: #3d4462;
+}
+
+.area-card h3 {
+    font-size: 18px;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.area-card:hover h3 {
+    color: #D4AF37;
+}
+
+.area-card p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive grid for practice areas */
+@media (max-width: 1200px) {
+    .areas-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-areas .container {
+        padding: 0 20px;
+    }
+
+    .practice-areas {
+        padding: 50px 0;
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+    }
 }
 
 /* Footer */
@@ -292,9 +375,5 @@ body {
 
     .stat-number {
         font-size: 24px;
-    }
-
-    .features {
-        padding: 50px 20px;
     }
 }
