@@ -107,7 +107,7 @@ body {
 /* Hero Section */
 .hero {
     background: linear-gradient(to right, rgba(29, 36, 56, 0.95) 0%, rgba(29, 36, 56, 0.8) 50%, rgba(29, 36, 56, 0.6) 100%),
-                url('../images/huntsville-skyline.jpg') center/cover no-repeat;
+                url('../images/huntsville.jpg') center/cover no-repeat;
     background-color: #1d2438;
     color: white;
     padding: 80px 60px;
